@@ -1,4 +1,4 @@
-playground
-==========
+# playground
 
-An assorted collections of things I am trying
+
+An assorted collections of things I am trying.
