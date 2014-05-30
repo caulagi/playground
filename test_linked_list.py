@@ -25,6 +25,11 @@ class TestLinkedLilst(unittest.TestCase):
         l = self.linked_list
         l.prepend("d")
         self.assertEquals(l[0].data, 'd')
+        
+    def test_adding_at_end(self): 
+        l = self.linked_list
+        l.append("e")
+        self.assertEquals(l[-1].data, 'e')
 
 if __name__ == "__main__":
     unittest.main()
