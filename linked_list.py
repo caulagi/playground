@@ -71,7 +71,9 @@ class LinkedList(object):
 
     def __getitem__(self, key):
         node  = self._start
-        for index in xrange(0,key):
+        # handle negative indexes
+        quo, mod = divmod(key, self._len)
+        for index in xrange(0, mod):
             if not node.after:
                 raise IndexError("Invalid index: %s" % key)
             node = node.after
