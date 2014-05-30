@@ -37,5 +37,10 @@ class TestLinkedLilst(unittest.TestCase):
         self.assertEquals(l[-1].data, 'e')
         self.assertEquals(l[-2].data, 'c')
 
+    def test_iteration(self):
+        l = self.linked_list
+        for node, expected in zip(l, ["a", "b", "c"]):
+            self.assertEquals(node.data, expected) 
+
 if __name__ == "__main__":
     unittest.main()
